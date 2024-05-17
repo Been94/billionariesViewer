@@ -2,7 +2,6 @@ import styles from "@/app/styles/Card.module.css";
 import Card from "./Card";
 import { useQuery } from "@tanstack/react-query";
 import { ApiProps, fetchInfo } from "../etc/Api";
-//카드 배경
 
 export default function CardBackground() {
   const { isLoading, data } = useQuery<ApiProps[]>({
@@ -13,7 +12,7 @@ export default function CardBackground() {
   return (
     <>
       {isLoading ? (
-        <span>Loading...</span>
+        <span className={styles.load}>Loading...</span>
       ) : (
         <div className={styles.background}>
           {data?.map((info, index) => (

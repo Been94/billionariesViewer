@@ -1,3 +1,12 @@
+.load {
+  font-size: large;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
 .background {
   color: white;
   margin-top: 2%;

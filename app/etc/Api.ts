@@ -1,5 +1,3 @@
-//https://billions-api.nomadcoders.workers.dev/
-
 export interface ApiProps {
   id: string;
   industries: string;
@@ -12,6 +10,7 @@ export interface financialAssetsProps {
   ticker: string;
   companyName: string;
   numberOfShares: number;
+  exerciseOptionPrice: number;
   sharePrice: string;
   currencyCode: string;
   exchangeRate: number;
@@ -20,21 +19,21 @@ export interface financialAssetsProps {
 }
 
 export interface ApiDetailProps {
-  id: string;
-  state: string;
-  city: string;
-  name: string;
-  country: string;
-  position: number;
-  industries: string;
-  financialAssets: financialAssetsProps[];
-  thumbnail: string;
-  squareImage: string;
-  bio: string;
-  about: string;
-  netWorth: string;
+  id?: string;
+  state?: string;
+  city?: string;
+  name?: string;
+  country?: string;
+  position?: number;
+  industries?: string;
+  financialAssets?: financialAssetsProps[];
+  thumbnail?: string;
+  squareImage?: string;
+  bio?: string;
+  about?: string;
+  netWorth?: string;
 }
-//https://billions-api.nomadcoders.workers.dev/
+
 export async function fetchInfo(url: string) {
   return fetch(url).then((res) => res.json());
 }
